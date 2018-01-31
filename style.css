@@ -1,8 +1,46 @@
-.header{
+.header {
     background-image: url(source/img/christophe-maertens-463540.jpg);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     height: 100vh;
     font-family: Microsoft JhengHei;
+}
+
+#Section1 {
+    height: 100vh;
+}
+
+#Section2 {
+    height: 100vh;
+}
+.Service{
+    font-family: Microsoft JhengHei;
+    height: 90%;
+}
+.Service1 {
+    background-image: url(source/img/tommy-527071.jpg);
+    background-position: center center;
+    background-size: cover;
+    padding-top: 30%;
+    padding-bottom: 30%;
+        opacity:1.0;
+}
+
+.Service2 {
+    background-image: url(source/img/justin-main-82527.jpg);
+    background-position: center center;
+        background-size: cover;
+        padding-top: 30%;
+    padding-bottom: 30%;
+    opacity:0.6;
+}
+
+.Service3 {
+    background-image: url(source/img/nik-lanus-41808.jpg);
+    background-position: center center;
+    background-size: cover;
+        padding-top: 30%;
+    padding-bottom: 30%;
+        opacity:0.6;
 }
