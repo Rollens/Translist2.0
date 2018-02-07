@@ -12,12 +12,13 @@
     height: 90%;
 }
 
+.Stext{
+}
+
 .Service1 {
     background-image: url(source/img/tommy-527071.jpg);
     background-position: center center;
     background-size: cover;
-    padding-top: 30%;
-    padding-bottom: 30%;
     opacity: 1.0;
 }
 
@@ -25,8 +26,6 @@
     background-image: url(source/img/justin-main-82527.jpg);
     background-position: center center;
     background-size: cover;
-    padding-top: 30%;
-    padding-bottom: 30%;
     opacity: 0.6;
 }
 
@@ -34,12 +33,18 @@
     background-image: url(source/img/nik-lanus-41808.jpg);
     background-position: center center;
     background-size: cover;
-    padding-top: 30%;
-    padding-bottom: 30%;
     opacity: 0.6;
 }
 
-.ServiceText{
+.ServiceText {
     padding-top: 30%;
     padding-bottom: 30%;
+}
+
+#Section4 {
+    background: url(source/img/filip-mroz-442006.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
 }

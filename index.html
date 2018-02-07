@@ -3,13 +3,14 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://vuejs.org/js/vue.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 
 <body>
@@ -24,17 +25,25 @@
         </div>
     </header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <a class="navbar-brand" href="#" style="font-family:ubuntu;">Translist</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        <div class="collapse navbar-collapse" style="font-family: Microsoft JhengHei;">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">首頁</a>
-                <a class="nav-item nav-link" href="#about-us">關於我們</a>
-                <a class="nav-item nav-link" href="#service">服務項目</a>
-                <a class="nav-item nav-link" href="#operation">操作流程</a>
-            </div>
+        <a class="navbar-brand" href="#" style="font-family: ubuntu;">Translist</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" style="font-family: Microsoft JhengHei;">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">首頁<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about-us">關於我們</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#service">服務項目</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#operation">操作流程</a>
+                </li>
+            </ul>
         </div>
     </nav>
     <a name="about-us"></a>
@@ -56,16 +65,25 @@
         <div class="container">
             <h2 style="font-family: Microsoft JhengHei;">服務項目</h2>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid  pt-5">
             <div class="row d-flex justify-content-center align-items-center Service">
-                <div class="col-md-4  align-itself-center Service1">
-                    <h2 class="text-center text-light ServiceText">城間運輸</h2>
+                <div class="col-md-4  align-itself-center Service1 jhov">
+                    <h2 class="text-center text-light ServiceText jphov">城間運輸</h2>
                 </div>
-                <div class="col-md-4  align-itself-center Service2">
-                    <h2 class="text-center text-light ServiceText">城內交通</h2>
+                <div class="col-md-4  align-itself-center Service2 jhov">
+                    <h2 class="text-center text-light ServiceText jphov">城內交通</h2>
                 </div>
-                <div class="col-md-4  align-itself-center Service3">
-                    <h2 class="text-center text-light ServiceText">尋找飯店</h2>
+                <div class="col-md-4  align-itself-center Service3 jhov">
+                    <h2 class="text-center text-light ServiceText jphov">尋找飯店</h2>
+                </div>
+                <div class="Stext S1 col-md-8 align-itself-center">
+                    <p v-for="write in city" style="padding-left: 30%;">{{write}}<br></p>
+                </div>
+                <div class="Stext S2 col-md-8 align-itself-center">
+                    <p v-for="write in urban" style="padding-left: 30%;">{{write}}<br></p>
+                </div>
+                <div class="Stext S3 col-md-8 align-itself-center">
+                    <p v-for="write in hotel" style="padding-left: 30%;">{{write}}<br></p>
                 </div>
             </div>
         </div>
@@ -74,22 +92,60 @@
     <div class="py-3" id="Section3" style="font-family: Microsoft JhengHei;">
         <div class="container">
             <h2>操作流程</h2>
-            <div class="row">
+            <div class="row pt-5">
                 <div class="col-md-3">
-                    <p>第一步</p>
+                    <div class="d-flex">
+                        <p style="font-size:22px;padding-right: 50%;">第一步</p>
+                        <i class="fas fa-search fa-2x"></i>
+                    </div>
+                    <div class="pt-5">
+                        <p v-for="write in first">{{write}}</p>
+                    </div>
                 </div>
                 <div class="col-md-3">
-                    <p>第二步</p>
+                    <div class="d-flex">
+                        <p style="font-size:22px;padding-right: 50%;">第二步</p>
+                        <i class="fas fa-list-ul fa-2x"></i>
+                    </div>
+                    <div class="pt-5">
+                        <p v-for="write in second">{{write}}</p>
+                    </div>
                 </div>
                 <div class="col-md-3">
-                    <p>第三步</p>
+                    <div class="d-flex">
+                        <p style="font-size:22px;padding-right: 50%;">第三步</p>
+                        <i class="fas fa-cogs fa-2x"></i>
+                    </div>
+                    <div class="pt-5">
+                        <p v-for="write in third">{{write}}</p>
+                    </div>
                 </div>
                 <div class="col-md-3">
-                    <p>第四步</p>
+                    <div class="d-flex">
+                        <p style="font-size:22px;padding-right: 50%;">第四步</p>
+                        <i class="fas fa-check fa-2x"></i>
+                    </div>
+                    <div class="pt-5">
+                        <p v-for="write in fourth">{{write}}</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <section id="Section4" class="d-flex justify-content-center align-items-center flex-column" style="font-family:Microsoft JhengHei;">
+        <p style="font-size: 36px; color: whitesmoke;">要出發了?</p>
+        <a href="#" class="btn btn-outline-light">開始規劃</a>
+    </section>
+    <section class="" id="Section5" style="font-family: Microsoft JhengHei;">
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center" style="background: gray;">
+            <p>聯絡我們</p>
+            <div>
+                <i class="fab fa-facebook fa-1x"></i>
+                <i class="fab fa-github fa-1x"></i>
+            </div>
+        </div>
+    </section>
+
     <script type="text/javascript" src="operation.js"></script>
 </body>
 
